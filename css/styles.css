@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+  text-transform: capitalize;
+}
+
+nav {
+  height: 125px;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 25px;
+  font-weight: 400;
+}
+nav .links {
+  margin-right: 20px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .links a {
+  text-decoration: none;
+  color: rgb(85, 85, 155);
+  padding: 5px 10px 5px 10px;
+}
+nav .links a:hover {
+  background-color: rgb(180, 180, 180);
+}
+
+.form {
+  min-height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: green;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.form .getWeather {
+  background-color: yellow;
+}
+.form .getWeather input {
+  margin-bottom: 10px;
+}
+.form .getWeather button {
+  display: flex;
+  margin: 0 auto;
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.currentWeatherDisplay {
+  background-color: red;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 2</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="links">
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+      </div>
+      <div class="buttons">
+        <button>Log In</button>
+        <button>Sign Up</button>
+      </div>
+    </nav>
+
+    <div id="app">
+      <div class="form">
+        <div class="getWeather">
+          <label for="location">Location</label>
+          <input id="gwInput" type="text" placeholder="location for weather" />
+          <button id="gw">Get Weather</button>
+        </div>
+      </div>
+      <div class="currentWeatherDisplay">
+        <p>why</p>
+      </div>
+    </div>
+    <script src="lib/jquery-3.6.1.min.js"></script>
+    <script type="module" src="app/model.js"></script>
+    <script type="module" src="app/app.js"></script>
+  </body>
+</html>

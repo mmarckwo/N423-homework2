@@ -1,0 +1,28 @@
+nav {
+  height: 125px;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 25px;
+//   font-family: "Yantramanav", sans-serif;
+  font-weight: 400;
+
+  .links {
+    margin-right: 20px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: rgb(85, 85, 155);
+      padding: 5px 10px 5px 10px;
+    }
+
+    a:hover {
+      background-color: rgb(180, 180, 180);
+    }
+  }
+}

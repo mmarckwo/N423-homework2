@@ -1,0 +1,33 @@
+.form {
+  min-height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+  background-color: green;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  .getWeather {
+    background-color: yellow;
+
+    input {
+        margin-bottom: 10px;
+    }
+
+    button {
+        display: flex;
+        margin: 0 auto;
+        background-color: blue;
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 15px;
+      }
+  }
+}
+
+.currentWeatherDisplay {
+  background-color: red;
+}
