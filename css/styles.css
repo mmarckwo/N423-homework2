@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Source+Sans+Pro&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,45 +18,89 @@ h5,
 h6,
 p {
   margin-bottom: 16px;
-  text-transform: capitalize;
 }
 
 nav {
-  height: 125px;
+  min-height: 125px;
   background-color: rgb(240, 240, 240);
   display: flex;
   align-items: center;
   justify-content: space-around;
   font-size: 25px;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
 }
 nav .links {
-  margin-right: 20px;
-  width: 500px;
+  max-width: 500px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 nav .links a {
   text-decoration: none;
-  color: rgb(85, 85, 155);
-  padding: 5px 10px 5px 10px;
+  color: rgb(15, 120, 140);
+  padding: 5px 15px 5px 15px;
 }
 nav .links a:hover {
-  background-color: rgb(180, 180, 180);
+  background-color: rgb(200, 200, 200);
+}
+nav .buttons button {
+  margin-left: 10px;
+}
+nav .buttons button#login {
+  background-color: rgb(35, 145, 170);
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 20px;
+}
+nav .buttons button#signup {
+  background-color: rgb(50, 50, 255);
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 20px;
 }
 
+@media only screen and (max-width: 600px) {
+  nav {
+    display: block;
+    padding: 10px;
+  }
+  nav .links {
+    max-width: 100%;
+  }
+  nav .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 16px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+  }
+  nav .buttons button {
+    margin-left: 16px;
+  }
+}
 .form {
   min-height: 125px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: green;
   padding-top: 25px;
   padding-bottom: 25px;
 }
 .form .getWeather {
-  background-color: yellow;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 16px;
+}
+.form .getWeather label {
+  font-size: 20px;
 }
 .form .getWeather input {
   margin-bottom: 10px;
@@ -63,17 +108,172 @@ nav .links a:hover {
 .form .getWeather button {
   display: flex;
   margin: 0 auto;
-  background-color: blue;
+  background-color: rgb(50, 50, 255);
   border: none;
   color: white;
   padding: 10px;
   text-align: center;
   text-decoration: none;
   border-radius: 15px;
+  margin-top: 12px;
 }
 
-.currentWeatherDisplay {
-  background-color: red;
+.weatherDisplayArea {
+  min-height: 125px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  display: none;
+}
+.weatherDisplayArea h1 {
+  margin: 0 auto;
+  max-width: 500px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: "Cabin", sans-serif;
+}
+.weatherDisplayArea .weatherPanel {
+  margin: 0 auto;
+  min-height: 125px;
+  max-width: 500px;
+  background-color: rgb(245, 245, 245);
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+.weatherDisplayArea .weatherPanel p {
+  margin-right: 5px;
+}
+.weatherDisplayArea .weatherPanel .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.weatherDisplayArea .weatherPanel .header .areaName {
+  display: flex;
+}
+.weatherDisplayArea .weatherPanel .header #time {
+  width: 100px;
+}
+.weatherDisplayArea .weatherPanel .currentStatus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  margin-bottom: 16px;
+}
+.weatherDisplayArea .weatherPanel .currentStatus .tempConditionArea .tempArea {
+  display: flex;
+  align-items: flex-end;
+}
+.weatherDisplayArea .weatherPanel .currentStatus .tempConditionArea .tempArea #tempF {
+  font-size: 36px;
+}
+.weatherDisplayArea .weatherPanel .currentStatus .tempConditionArea .tempArea #tempC {
+  color: gray;
+  margin-left: 10px;
+}
+.weatherDisplayArea .weatherPanel .otherStats .windStats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  margin-bottom: 16px;
+}
+.weatherDisplayArea .weatherPanel .otherStats .windStats .windSpeed {
+  display: flex;
+  align-items: flex-end;
+}
+.weatherDisplayArea .weatherPanel .otherStats .windStats .windSpeed #windKPH {
+  color: gray;
+  margin-left: 10px;
+}
+.weatherDisplayArea .weatherPanel .otherStats .windStats .windDirection {
+  display: flex;
+}
+.weatherDisplayArea .weatherPanel .otherStats .rainStats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  margin-bottom: 16px;
+}
+.weatherDisplayArea .weatherPanel .otherStats .feelStats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  margin-bottom: 16px;
+}
+.weatherDisplayArea .weatherPanel .otherStats .feelStats .feelTemp {
+  display: flex;
+}
+.weatherDisplayArea .weatherPanel .otherStats .feelStats .feelTemp #feelsC {
+  color: gray;
+  margin-left: 10px;
+}
+.weatherDisplayArea .weatherPanel .otherStats .gustStats {
+  display: flex;
+  border-bottom: 1px solid gray;
+  margin-bottom: 16px;
+}
+.weatherDisplayArea .weatherPanel .otherStats .gustStats #gustKPH {
+  color: gray;
+  margin-left: 10px;
+}
+.weatherDisplayArea .weatherPanel .astroStats {
+  border-bottom: 1px solid gray;
+  margin-bottom: 16px;
+}
+.weatherDisplayArea .weatherPanel .astroStats .sunStats {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.weatherDisplayArea .weatherPanel .astroStats .moonStats {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.weatherDisplayArea .weatherPanel .astroStats .moonInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.weatherDisplayArea .weatherPanel .futureStats .futureTemp {
+  border-bottom: 1px solid gray;
+  margin-bottom: 16px;
+}
+.weatherDisplayArea .weatherPanel .futureStats .futureTemp .maxTemps {
+  display: flex;
+}
+.weatherDisplayArea .weatherPanel .futureStats .futureTemp .maxTemps #maxC {
+  color: gray;
+  margin-left: 10px;
+}
+.weatherDisplayArea .weatherPanel .futureStats .futureTemp .minTemps {
+  display: flex;
+}
+.weatherDisplayArea .weatherPanel .futureStats .futureTemp .minTemps #minC {
+  color: gray;
+  margin-left: 10px;
+}
+.weatherDisplayArea .weatherPanel .futureStats .futureWindStats {
+  display: flex;
+  border-bottom: 1px solid gray;
+  margin-bottom: 16px;
+}
+.weatherDisplayArea .weatherPanel .futureStats .futureWindStats #maxWindKPH {
+  color: gray;
+  margin-left: 10px;
+}
+.weatherDisplayArea .weatherPanel .futureStats .futureRainStats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=styles.css.map */

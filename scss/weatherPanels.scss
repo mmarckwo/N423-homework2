@@ -3,12 +3,16 @@
   display: flex;
   align-items: center;
   justify-content: space-around; 
-  background-color: green;
   padding-top: 25px;
   padding-bottom: 25px;
 
   .getWeather {
-    background-color: yellow;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 16px;
+
+    label {
+        font-size: 20px;
+    }
 
     input {
         margin-bottom: 10px;
@@ -17,17 +21,218 @@
     button {
         display: flex;
         margin: 0 auto;
-        background-color: blue;
+        background-color: rgb(50, 50, 255);
         border: none;
         color: white;
         padding: 10px;
         text-align: center;
         text-decoration: none;
         border-radius: 15px;
+        margin-top: 12px;
       }
   }
 }
 
-.currentWeatherDisplay {
-  background-color: red;
+.weatherDisplayArea {
+  min-height: 125px;
+  padding-top: 25px;
+  padding-bottom: 25px; 
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: none;
+
+  h1 {
+    margin: 0 auto;
+    max-width: 500px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Cabin', sans-serif;
+  }
+
+  .weatherPanel {
+    margin: 0 auto;
+    min-height: 125px;
+    max-width: 500px;
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+
+    p {
+        margin-right: 5px;
+    }
+
+    .header {
+        display: flex; 
+        align-items: center;
+        justify-content: space-between; 
+        font-size: 20px;
+
+        .areaName {
+            display: flex;
+        }
+
+        #time {
+            width: 100px;
+        }
+
+    }
+
+    .currentStatus {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        border-bottom: 1px solid gray;
+        margin-bottom: 16px;
+
+        .tempConditionArea { 
+
+            .tempArea {
+                display: flex;
+                align-items: flex-end;
+
+                #tempF {
+                    font-size: 36px;
+                }
+
+                #tempC {
+                    color: gray;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+
+    
+    .otherStats {
+        .windStats {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid gray;
+            margin-bottom: 16px;
+
+            .windSpeed {
+                display: flex;
+                align-items: flex-end;
+
+                #windMPH {
+                    // font-size: 26px;
+                }
+
+                #windKPH {
+                    color: gray;
+                    margin-left: 10px;
+                }
+            }
+            
+            .windDirection {
+                display: flex;
+            }
+        }
+
+        .rainStats {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid gray;
+            margin-bottom: 16px;
+        }
+
+        .feelStats {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid gray;
+            margin-bottom: 16px;
+
+            .feelTemp {
+                display: flex;
+
+                #feelsC {
+                    color: gray;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .gustStats {
+            display: flex;
+            border-bottom: 1px solid gray;
+            margin-bottom: 16px;
+
+            #gustKPH {
+                color: gray;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .astroStats {
+        border-bottom: 1px solid gray;
+        margin-bottom: 16px; 
+
+        .sunStats {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .moonStats {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .moonInfo {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+
+    .futureStats {
+        .futureTemp {
+            border-bottom: 1px solid gray;
+            margin-bottom: 16px;
+
+            .maxTemps {
+                display: flex;
+
+                #maxC {
+                    color: gray;
+                    margin-left: 10px;
+                }
+            }
+
+            .minTemps {
+                display: flex;
+
+                #minC {
+                    color: gray;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .futureWindStats {
+            display: flex;
+            border-bottom: 1px solid gray;
+            margin-bottom: 16px;
+
+            #maxWindKPH {
+                color: gray;
+                margin-left: 10px;
+            }
+        }
+
+        .futureRainStats {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+  }
 }

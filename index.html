@@ -10,27 +10,138 @@
   <body>
     <nav>
       <div class="links">
-        <a href="#">link</a>
-        <a href="#">link</a>
-        <a href="#">link</a>
-        <a href="#">link</a>
+        <a href="#">Home</a>
+        <a href="#">Weather</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
       </div>
       <div class="buttons">
-        <button>Log In</button>
-        <button>Sign Up</button>
+        <button id="login">Log In</button>
+        <button id="signup">Sign Up</button>
       </div>
     </nav>
 
     <div id="app">
       <div class="form">
         <div class="getWeather">
-          <label for="location">Location</label>
-          <input id="gwInput" type="text" placeholder="location for weather" />
+          <div class="weatherSelection">
+            <label for="location">Location:</label>
+            <input
+              id="gwInput"
+              type="text"
+              placeholder="location for weather"
+            />
+            <br />
+            <label for="forecast">Forecast Range:</label>
+            <select id="forecastRange">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
           <button id="gw">Get Weather</button>
         </div>
       </div>
-      <div class="currentWeatherDisplay">
-        <p>why</p>
+      <div class="weatherDisplayArea">
+        <hr />
+        <h1>Current</h1>
+        <div class="weatherPanel">
+          <div class="header">
+            <div class="areaName">
+              <p id="area">Area</p>
+              <p id="region">State</p>
+            </div>
+            <p id="time">Time</p>
+          </div>
+
+          <div class="currentStatus">
+            <div class="tempConditionArea">
+              <div class="tempArea">
+                <p id="tempF">TEMP F</p>
+                <p id="tempC">temp c</p>
+              </div>
+              <p id="condition">condition text</p>
+            </div>
+            <p><img id="weatherIcon" src="" alt="weather icon" /></p>
+          </div>
+
+          <div class="otherStats">
+            <div class="windStats">
+              <div class="windSpeed">
+                <p id="windMPH">WIND MPH</p>
+                <p id="windKPH">wind kph</p>
+              </div>
+              <div class="windDirection">
+                <p id="windDeg">wind degrees</p>
+                <p id="windDir">wind dir</p>
+              </div>
+            </div>
+            <div class="rainStats">
+              <p id="precipIN">percip_in</p>
+              <p id="humidity">humidity</p>
+              <p id="cloudCoverage">cloud</p>
+            </div>
+            <div class="feelStats">
+              <div class="feelTemp">
+                <p id="feelsF">Feels like F</p>
+                <p id="feelsC">feels like c</p>
+              </div>
+              <p id="UV">UV</p>
+            </div>
+            <div class="gustStats">
+              <p id="gustMPH">gust MPH</p>
+              <p id="gustKPH">gust KPH</p>
+            </div>
+          </div>
+
+          <div class="astroStats">
+            <div class="sunStats">
+              <p id="sunrise">sunrise</p>
+              <p id="sunset">sunset</p>
+            </div>
+            <div class="moonStats">
+              <p id="moonrise">moonrise</p>
+              <p id="moonset">moonset</p>
+            </div>
+            <div class="moonInfo">
+              <p id="moonphase">moon phase</p>
+              <p id="moonIllu">moon illumination</p>
+            </div>
+          </div>
+
+          <div class="futureStats">
+            <div class="futureTemp">
+              <div class="maxTemps">
+                <p id="maxF">max F</p>
+                <p id="maxC">max C</p>
+              </div>
+              <div class="minTemps">
+                <p id="minF">min F</p>
+                <p id="minC">min C</p>
+              </div>
+            </div>
+            <div class="futureWindStats">
+              <p id="maxWindMPH">max wind MPH</p>
+              <p id="maxWindKPH">max wind KPH</p>
+            </div>
+            <div class="futureRainStats">
+              <p id="totalPrecip">total precip_in</p>
+              <p id="avgHumidity">avg humidity</p>
+              <p id="rainChance">chance of rain</p>
+            </div>
+            <p id="overallUV">Overall UV</p>
+          </div>
+        </div>
+        <hr />
+        <h1>Future Days</h1>
+        <div id="futureDays"></div>
       </div>
     </div>
     <script src="lib/jquery-3.6.1.min.js"></script>
