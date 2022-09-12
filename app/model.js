@@ -1,4 +1,4 @@
-var key = "896885b9e2ac420488d202351222908";
+var key = "53599ec288054906a0a203018222908";
 var baseURL = "https://api.weatherapi.com/v1/";
 
 function getCurrentDate() {
